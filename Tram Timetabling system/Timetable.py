@@ -2,7 +2,7 @@ class Timetable:
     def __init__(self, btype, colour, talk):
         self.birdtype = btype
         self.birdcolour = colour
-        self.birdtalk = tal
+        self.birdtalk = talk
 
     def fly(self):
         print("The " + self.birdtype + " is flying.")
