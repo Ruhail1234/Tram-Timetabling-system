@@ -1,35 +1,49 @@
 class Timetable:
-    def __init__(self, tram_name, arrival_time, max_capacity, passenger_count, stop_names):
+    def __init__(self, tram_name, arrival_time, max_capacity, passenger_count, stop_names=None):
         self.tram_name = tname
         self.arrival_time = Atime
         self.max_capacity = Mcapacity
         self.passenger_count = Passengers
-        self.stop_names = Stops
+        self.stop_names = Stops if stop_names is not None else []
 
     def getTramName(self):
-        return self.tram_name
+        return tname
 
     def getArrivalTime(self):
-        return self.arrival_time
+        return Atime
 
     def setArrivalTime(self):
         new_time = input("What would be the time?")
-        if new_time == self.arrival_time:
-            return self.arrival_time
+        if new_time == Atime:
+            return Atime
         else:
-            self.arrival_time = new_time
+            Atime = new_time
+            return Atime
 
     def getMaxCapacity(self):
-        return self.max_capacity
+        return Mcapacity
 
     def PassengerCount(self):
         return self.passenger_count
 
     def updatePassengerCount(self):
-        self.passenger_count + 1
+        Passengers + 1
     
-    def getStopNames():
-        return self.stop_names
+    def getStopNames(self):
+        Stops = []
+        return Stops
+
+    def addStop():
+        newStop = input("what stop do you want to add?")
+
+        Stops.insert(100, newStop)
+
+        return Stops
+
+    def removeStop(self):
+        stop_remove = input("What value of stop due you want to remove (eg: stops 1 is Lidcombe and you want to remove Lidcombe then typpe 1)")
+        
+        Stops.pop(stop_remove)
 
     
     
