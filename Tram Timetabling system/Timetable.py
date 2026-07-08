@@ -5,6 +5,7 @@ class Timetable:
         self.max_capacity = Mcapacity
         self.passenger_count = Passengers
         self.stop_names = Stops if stop_names is not None else []
+        Isfull = False
 
     def getTramName(self):
         return tname
@@ -45,8 +46,13 @@ class Timetable:
         
         Stops.pop(stop_remove)
 
-    
-    
+    def isTramfull(self):
+        if Passengers > 2800:
+            Isfull = True
+            print("Beware: Tram is full.")
+        else:
+            Isfull = False
+            print("Tram is catchable")
 
     
 Budgerigar = bird("Budgerigar", "blue", "can't talk")
