@@ -1,59 +1,54 @@
 class Timetable:
     def __init__(self, tram_name, arrival_time, max_capacity, passenger_count, stop_names=None):
-        self.tram_name = tname
-        self.arrival_time = Atime
-        self.max_capacity = Mcapacity
-        self.passenger_count = Passengers
-        self.stop_names = Stops if stop_names is not None else []
-        Isfull = False
+        self.tram_name = tram_name
+        self.arrival_time = arrival_time
+        self.max_capacity = max_capacity
+        self.passenger_count = passenger_count
+        self.stop_names = stop_names if stop_names is not None else []
 
     def getTramName(self):
-        return tname
+        print("Tram Name: ", self.tram_name)
 
     def getArrivalTime(self):
-        return Atime
+        print("Arriving at: ", self.arrival_time)
 
     def setArrivalTime(self):
         new_time = input("What would be the time?")
-        if new_time == Atime:
-            return Atime
-        else:
-            Atime = new_time
-            return Atime
+        self.arrival_time = new_time
 
     def getMaxCapacity(self):
-        return Mcapacity
+        print("No more than ", self.max_capacity, " Passengers")
 
     def PassengerCount(self):
-        return self.passenger_count
+        print(self.PassengerCount)
 
     def updatePassengerCount(self):
-        Passengers + 1
+        self.passenger_count + 1
     
     def getStopNames(self):
-        Stops = []
-        return Stops
+        print("Stopping at: ", self.stop_names)
 
-    def addStop():
+    def addStop(self):
         newStop = input("what stop do you want to add?")
 
-        Stops.insert(100, newStop)
+        self.stop_names.append(newStop)
 
-        return Stops
+        print(self.stop_names)
 
     def removeStop(self):
-        stop_remove = input("What value of stop due you want to remove (eg: stops 1 is Lidcombe and you want to remove Lidcombe then typpe 1)")
+        stop_remove = input("What value of stop due you want to remove")
         
-        Stops.pop(stop_remove)
+        self.stop_names.pop(stop_remove)
 
-    def isTramfull(self):
-        if Passengers > 2800:
-            Isfull = True
+    def isfull(self):
+        if self.passenger_count > 2800:
             print("Beware: Tram is full.")
         else:
-            Isfull = False
-            print("Tram is catchable")
+            print("Tram is not full")
 
     
-Budgerigar = bird("Budgerigar", "blue", "can't talk")
-Budgerigar.fly()
+Leppingotn = Timetable("Leppington", "5:30am", "2800", "0", ["Canvely Vale", "Cabramatta", "Warwick Farm", "Liverpool", "Casula", "Glenfield", "Edminson Park", "Leppington"])
+Leppingotn.getTramName()
+Leppingotn.getArrivalTime()
+Leppingotn.getStopNames()
+Leppingotn.getMaxCapacity()
