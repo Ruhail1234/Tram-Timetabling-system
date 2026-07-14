@@ -1,10 +1,11 @@
 class Timetable_Model:
-    def __init__(self, tram_name, arrival_time, max_capacity, passenger_count, stop_names):
+    def __init__(self, tram_name, arrival_time, max_capacity, passenger_count, stop_id, stop_names):
         self.tram_name = tram_name
         self.arrival_time = arrival_time
         self.max_capacity = max_capacity
         self.passenger_count = passenger_count
         self.stop_names = stop_names
+        self.stop_id = stop_id
 
     def getTramName(self):
         print("Tram Name: ", self.tram_name)
@@ -47,20 +48,31 @@ class Timetable_Model:
             print("Tram is full")
         else:
             print("All aboard!")
+
+    def getStopDetails(self):
+        if self.stop_id == 7123:
+            self.stop_names = ["Canley Vale", "Cabramatta", "Warwick Farm", "Liverpool", "Casula", "Glenfield", "Edminson Park", "Leppington"]
+        
+        elif self.stop_id == 7144:
+            self.stop_names = ["Bankstown", "Meryion", "Quackers hill", "Scofield", "Harbour Town"]
         
 
-Leppingoton = Timetable_Model("Leppington", "5:30am", 2800, 0, ["Canley Vale", "Cabramatta", "Warwick Farm", "Liverpool", "Casula", "Glenfield", "Edminson Park", "Leppington"])
-Leppingoton.getTramName()
-Leppingoton.removeStop()
-Leppingoton.getArrivalTime()
-Leppingoton.getStopNames()
-Leppingoton.getMaxCapacity()
-Leppingoton.isfull()
+Leppington = Timetable_Model("Leppington", "5:30am", 2800, 0, 7123, [])
+Leppington.getTramName()
+Leppington.getStopDetails()
+Leppington.removeStop()
+Leppington.getArrivalTime()
+Leppington.getStopNames()
+Leppington.getMaxCapacity()
+Leppington.isfull()
 
-Harbour_Town = Timetable_Model("Harbour Town", "5:37am", 2800, 0, ["BanksTown", "Meryion", "Quackers hill", "Scofield", "Harbour Town"])
+Harbour_Town = Timetable_Model("Harbour Town", "5:37am", 2800, 0, 7144, [])
 Harbour_Town.getTramName()
+Harbour_Town.getStopDetails()
 Harbour_Town.removeStop()
 Harbour_Town.getArrivalTime()
 Harbour_Town.getStopNames()
 Harbour_Town.getMaxCapacity()
 Harbour_Town.isfull()
+
+exit("\033[1mTimeTable brought to you by Sydney Trams\033[0m")
