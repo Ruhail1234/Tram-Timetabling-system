@@ -28,7 +28,7 @@ class Timetable_Model:
         new_time = input("What would be the time? ")
         self.arrival_time = new_time
         if self.arrival_time == "6:00am" or "6:30am" or "7:00am" or "7:30am" or "8:00am" "3:00pm" or "3:30pm" or "4:00pm":
-                    self.passenger_count = 200 or 400
+                    self.passenger_count = 200
 
 #The method that is used to print the max capacity of a tram
     def getMaxCapacity(self):
