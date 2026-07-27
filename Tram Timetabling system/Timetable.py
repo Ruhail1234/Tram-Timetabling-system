@@ -50,7 +50,7 @@ class Timetable_Model:
     def addStop(self):
         newStop = input("what stop do you want to add? ")
         self.stop_names.append(newStop)
-        print(self.stop_names)
+        print("Stopping at: ", self.stop_names)
 
 #Used to remove a stop from the list of stop name of a tram
     def removeStop(self):
@@ -83,7 +83,6 @@ Leppington.getStopDetails()
 Leppington.getStopNames()
 Leppington.removeStop()
 Leppington.addStop()
-Leppington.getStopNames()
 Leppington.updatePassengerCount()
 Leppington.PassengerCount()
 Leppington.getArrivalTime()
@@ -100,7 +99,6 @@ Harbour_Town.getStopDetails()
 Harbour_Town.getStopNames()
 Harbour_Town.removeStop()
 Harbour_Town.addStop()
-Harbour_Town.getStopNames()
 Harbour_Town.updatePassengerCount()
 Harbour_Town.PassengerCount()
 Harbour_Town.getArrivalTime()
