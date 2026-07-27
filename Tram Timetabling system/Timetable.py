@@ -26,7 +26,7 @@ class Timetable_Model:
         print("No more than ", self.max_capacity, " Passengers")
 
     def PassengerCount(self):
-        print(self.passenger_count)
+        print("Number of Passenger: ", self.passenger_count)
 
     def updatePassengerCount(self):
         self.passenger_count += 1
@@ -58,14 +58,19 @@ class Timetable_Model:
         
         elif self.stop_id == 7144:
             self.stop_names = ["Bankstown", "Meryion", "Quackers hill", "Scofield", "Harbour Town"]
-        
+
+        if self.arrival_time == "6:00am" or "6:30am" or "7:00am" or "7:30am" or "8:00am" "3:00pm" or "3:30pm" or "4:00pm":
+            self.passenger_count = 1800
+
 
 Leppington = Timetable_Model("Leppington", "5:30am", 2800, 0, 7123, [])
+Leppington.setArrivalTime()
 Leppington.getTramName()
 Leppington.getStopDetails()
 Leppington.getStopNames()
 Leppington.removeStop()
 Leppington.getStopNames()
+Leppington.PassengerCount()
 Leppington.getArrivalTime()
 Leppington.getMaxCapacity()
 Leppington.isfull()
@@ -73,11 +78,13 @@ Leppington.isfull()
 print("\n------------------------------------------------------------\n")
 
 Harbour_Town = Timetable_Model("Harbour Town", "5:37am", 2800, 0, 7144, [])
+Harbour_Town.setArrivalTime()
 Harbour_Town.getTramName()
 Harbour_Town.getStopDetails()
 Harbour_Town.getStopNames()
 Harbour_Town.removeStop()
 Harbour_Town.getStopNames()
+Harbour_Town.PassengerCount()
 Harbour_Town.getArrivalTime()
 Harbour_Town.getMaxCapacity()
 Harbour_Town.isfull()
