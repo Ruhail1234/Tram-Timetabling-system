@@ -63,7 +63,7 @@ class Timetable_Model:
             self.passenger_count = 1800
 
 
-Leppington = Timetable_Model("Leppington", "5:30am", 2800, 0, 7123, [])
+Leppington = Timetable_Model("Leppington", "5:30am", 400, 0, 7123, [])
 Leppington.setArrivalTime()
 Leppington.getTramName()
 Leppington.getStopDetails()
@@ -77,7 +77,7 @@ Leppington.isfull()
 
 print("\n------------------------------------------------------------\n")
 
-Harbour_Town = Timetable_Model("Harbour Town", "5:37am", 2800, 0, 7144, [])
+Harbour_Town = Timetable_Model("Harbour Town", "5:37am", 400, 0, 7144, [])
 Harbour_Town.setArrivalTime()
 Harbour_Town.getTramName()
 Harbour_Town.getStopDetails()
