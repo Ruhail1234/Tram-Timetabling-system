@@ -74,13 +74,9 @@ class Timetable_Model:
 
 #This inheritance is an example of the first tram that will have its information displayed.
 Leppington = Timetable_Model("Leppington", "5:30am", 400, 0, 7123, [])
-Leppington.setArrivalTime()
 Leppington.getTramName()
 Leppington.getStopDetails()
 Leppington.getStopNames()
-Leppington.removeStop()
-Leppington.addStop()
-Leppington.updatePassengerCount()
 Leppington.PassengerCount()
 Leppington.getArrivalTime()
 Leppington.getMaxCapacity()
@@ -90,13 +86,9 @@ print("\n------------------------------------------------------------\n")
 
 #This inheritance is another tram which will have its information displayed on the timetable after it is fully printed.
 Harbour_Town = Timetable_Model("Harbour Town", "5:37am", 400, 0, 7144, [])
-Harbour_Town.setArrivalTime()
 Harbour_Town.getTramName()
 Harbour_Town.getStopDetails()
 Harbour_Town.getStopNames()
-Harbour_Town.removeStop()
-Harbour_Town.addStop()
-Harbour_Town.updatePassengerCount()
 Harbour_Town.PassengerCount()
 Harbour_Town.getArrivalTime()
 Harbour_Town.getMaxCapacity()
