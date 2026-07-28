@@ -81,8 +81,6 @@ for i in range (192):
     Carlingford.getTramName()
     Carlingford.getStopDetails()
     Carlingford.getStopNames()
-    Carlingford.removeStop()
-    Carlingford.addStop()
     Carlingford.PassengerCount()
     Carlingford.updatePassengerCount()
     Carlingford.getArrivalTime()
