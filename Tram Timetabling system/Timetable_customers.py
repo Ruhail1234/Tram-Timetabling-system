@@ -5,6 +5,8 @@ print("          🚊 SYDNEY TRAMS TIMETABLE SYSTEM 🚊          ")
 print("============================================================")
 print("                 System Initialised...                      \n")
 
+import time
+
 #The class of timtable modellling system with the attributes such as tram name, arrival time, max capacity, etc initialised before use.
 class Timetable_Model:
     def __init__(self, tram_name, arrival_time, max_capacity, passenger_count, stop_id, stop_names):
@@ -72,12 +74,18 @@ class Timetable_Model:
         if self.stop_id == 7123:
             self.stop_names = ["Westmead ", "Westmead Hospital", "Childrens Hospital", "Ngara", "Benaud Oval", "Fennell Street", "Prince Alfred Square", "Church Street", "Parramatta Square", "Robin Thomas", "Tramway Avenue", "Rosehill Gardens", "Yallamundi", "Dundas", "Telopea", "Carlingford"]
 
-#This inheritance is an example of the first tram that will have its information displayed.
-Carlingford = Timetable_Model("Carlingford", "5:30am", 400, 0, 7123, [])
-Carlingford.getTramName()
-Carlingford.getStopDetails()
-Carlingford.getStopNames()
-Carlingford.PassengerCount()
-Carlingford.getArrivalTime()
-Carlingford.getMaxCapacity()
-Carlingford.isfull()
+for i in range (192):
+    #This inheritance is an example of the first tram that will have its information displayed.
+    Carlingford = Timetable_Model("Carlingford", "5:30am", 400, 0, 7123, [])
+    Carlingford.setArrivalTime()
+    Carlingford.getTramName()
+    Carlingford.getStopDetails()
+    Carlingford.getStopNames()
+    Carlingford.removeStop()
+    Carlingford.addStop()
+    Carlingford.PassengerCount()
+    Carlingford.updatePassengerCount()
+    Carlingford.getArrivalTime()
+    Carlingford.getMaxCapacity()
+    Carlingford.isfull()
+    time.sleep(450)

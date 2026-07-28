@@ -5,6 +5,8 @@ print("          🚊 SYDNEY TRAMS TIMETABLE SYSTEM 🚊          ")
 print("============================================================")
 print("                 System Initialised...                      \n")
 
+import time
+
 #The class of timtable modellling system with the attributes such as tram name, arrival time, max capacity, etc initialised before use.
 class Timetable_Model:
     def __init__(self, tram_name, arrival_time, max_capacity, passenger_count, stop_id, stop_names):
@@ -70,34 +72,21 @@ class Timetable_Model:
 #This methods gets the details of all the stop for a trams and assigns stops to a tram according to their stop id.
     def getStopDetails(self):
         if self.stop_id == 7123:
-            self.stop_names = ["Canley Vale", "Cabramatta", "Warwick Farm", "Liverpool", "Casula", "Glenfield", "Edminson Park", "Leppington"]
+            self.stop_names = ["Westmead ", "Westmead Hospital", "Childrens Hospital", "Ngara", "Benaud Oval", "Fennell Street", "Prince Alfred Square", "Church Street", "Parramatta Square", "Robin Thomas", "Tramway Avenue", "Rosehill Gardens", "Yallamundi", "Dundas", "Telopea", "Carlingford"]
 
-#This inheritance is an example of the first tram that will have its information displayed.
-Leppington = Timetable_Model("Leppington", "5:30am", 400, 0, 7123, [])
-Leppington.setArrivalTime()
-Leppington.getTramName()
-Leppington.getStopDetails()
-Leppington.getStopNames()
-Leppington.removeStop()
-Leppington.addStop()
-Leppington.updatePassengerCount()
-Leppington.PassengerCount()
-Leppington.getArrivalTime()
-Leppington.getMaxCapacity()
-Leppington.isfull()
+for i in range (192):
+    #This inheritance is an example of the first tram that will have its information displayed.
+    Carlingford = Timetable_Model("Carlingford", "5:30am", 400, 0, 7123, [])
+    Carlingford.setArrivalTime()
+    Carlingford.getTramName()
+    Carlingford.getStopDetails()
+    Carlingford.getStopNames()
+    Carlingford.removeStop()
+    Carlingford.addStop()
+    Carlingford.PassengerCount()
+    Carlingford.updatePassengerCount()
+    Carlingford.getArrivalTime()
+    Carlingford.getMaxCapacity()
+    Carlingford.isfull()
+    time.sleep(450)
 
-print("\n------------------------------------------------------------\n")
-
-#This inheritance is another tram which will have its information displayed on the timetable after it is fully printed.
-Harbour_Town = Timetable_Model("Harbour Town", "5:37am", 400, 0, 7144, [])
-Harbour_Town.setArrivalTime()
-Harbour_Town.getTramName()
-Harbour_Town.getStopDetails()
-Harbour_Town.getStopNames()
-Harbour_Town.removeStop()
-Harbour_Town.addStop()
-Harbour_Town.updatePassengerCount()
-Harbour_Town.PassengerCount()
-Harbour_Town.getArrivalTime()
-Harbour_Town.getMaxCapacity()
-Harbour_Town.isfull()
